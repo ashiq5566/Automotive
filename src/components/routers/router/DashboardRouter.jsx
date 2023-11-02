@@ -36,8 +36,8 @@ const Screen = styled.div`
 	padding: 30px 30px;
     margin-top: 108px;
     background: rgb(248, 249, 251);
-    width: calc(100vw - 277px);
+    width: calc(100vw - 371px);
     height: calc(100vh - 98px);
     overflow: hidden;
-    margin-left: 200px;
+    margin-left: 294px;
 `
