@@ -37,7 +37,6 @@ const Screen = styled.div`
     margin-top: 108px;
     background: rgb(248, 249, 251);
     width: calc(100vw - 371px);
-    height: calc(100vh - 98px);
-    overflow: hidden;
+    /* height: calc(100vh - 98px); */
     margin-left: 294px;
 `

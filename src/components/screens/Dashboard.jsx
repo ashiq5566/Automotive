@@ -1,7 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import Card from '../includes/Card'
-import RangeCard from '../includes/RangeCard'
+import RangeCard from '../includes/RecommendCard'
+import ChartCard from '../includes/ChartCard'
+import RecommendCard from '../includes/RecommendCard'
+import Cruze from "../../assets/images/car.png"
+import Swift from "../../assets/images/swift.png"
+import Mini from "../../assets/images/mini.png"
+
 
 
 const Dashboard = () => {
@@ -51,12 +57,75 @@ const Dashboard = () => {
       rail_color : "#F4F5F9"
     },
   ]
+
+  const chart_details = [
+    {
+      id : 1,
+      title : "Miles Statistics",
+      background_color : "#fff",
+	  type: 'bar',
+	  color : '#2884FF',
+	  borderColor : '2884FF'
+    },
+    {
+      id : 2,
+      title : "Car Statistics",
+      background_color : "#fff",
+	  type : 'line',
+	  color : '#FF764C',
+	  borderColor : '#FF764C'
+
+    },
+  ]
+
+  const recommend_data = [
+    {
+      id : 1,
+      title : "Chevorlet Cruze",
+      background_color : "#E1DFA4",
+	  percentage : "64",
+	  likes : "142K",
+	  amount : "42",
+	  image : Cruze
+    },
+    {
+		id : 2,
+		title : "Suzuki Swift",
+		background_color : "#E3ECF1",
+		percentage : "74",
+		likes : "152K",
+		amount : "52",
+		image : Swift
+	  },
+	  {
+		id : 3,
+		title : "Mini Cooper",
+		background_color : "#F4E3E5",
+		percentage : "84",
+		likes : "162K",
+		amount : "62",
+		image : Mini
+	  },
+  ]
+
   return (
-    <Container>
-    {progresses.map((value) => (
-      <Card key={value.id} progress={value}/>
-    ))}
-    </Container>
+    <Main>
+      <Container>
+		{progresses.map((value) => (
+			<Card key={value.id} progress={value}/>
+		))}
+		</Container>
+      <ChartContainer>
+		{chart_details.map((value) => (
+			<ChartCard key={value.id} detail={value} />
+		))}
+      </ChartContainer>
+	  <RecommendationCard>
+		{recommend_data.map((value) => (
+			<RecommendCard key={value.id} item={value} />
+		))}
+	  </RecommendationCard>
+    </Main>
   )
 }
 
@@ -66,4 +135,18 @@ const Container = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 20px;
+`;
+const Main = styled.div`
+`;
+
+const ChartContainer = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-top:18px;
+`;
+const RecommendationCard = styled.div`
+	margin-top:18px;
+	display: flex;
+	gap: 29px;
 `;
