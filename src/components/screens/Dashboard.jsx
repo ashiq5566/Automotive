@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import Card from '../includes/Card'
-import RangeCard from '../includes/RecommendCard'
-import ChartCard from '../includes/ChartCard'
-import RecommendCard from '../includes/RecommendCard'
+import Card from '../includes/dashboard/Card'
+import RangeCard from '../includes/dashboard/RecommendCard'
+import ChartCard from '../includes/dashboard/ChartCard'
 import Cruze from "../../assets/images/car.png"
 import Swift from "../../assets/images/swift.png"
 import Mini from "../../assets/images/mini.png"
+import RecommendCard from '../includes/dashboard/RecommendCard'
 
 
 

@@ -3,11 +3,7 @@ import styled from 'styled-components'
 import People from '/icons/people.svg'
 import Loop from '/icons/loop.svg'
 import Like from '/icons/like.svg'
-import Audi from '../../assets/images/audi-a3.png'
 import { ReactSVG } from 'react-svg'
-
-
-
 
 const ListingCard = ({ item = {} }) => {
   return (

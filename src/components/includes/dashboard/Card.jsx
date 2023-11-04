@@ -4,7 +4,7 @@ import Light from "/icons/light.svg";
 import Eclips from "/icons/eclips.svg";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import ProgressProvider from "../small/ProgressProvider";
+import ProgressProvider from "../../small/ProgressProvider";
 
 const Card = ({ progress = {} }) => {
   const [valueEnd, setValueEnd] = useState(75);

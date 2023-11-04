@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import ListingCard from '../includes/ListingCard'
+import ListingCard from '../includes/booking/ListingCard'
 import Mini from "../../assets/images/mini.png"
 import Crysta from "../../assets/images/crysta.png"
 import Desire from "../../assets/images/desire.png"

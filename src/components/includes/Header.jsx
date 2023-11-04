@@ -37,6 +37,7 @@ const Container = styled.div`
     position: fixed;
     width: 95vw;
     background-color: #fff;
+    z-index: 99;
 `;
 const Left = styled.div`
     display: flex;

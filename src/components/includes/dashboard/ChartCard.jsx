@@ -57,7 +57,6 @@ const Container = styled.div`
   width: calc(50% - 20px);
   background: ${({bg}) => bg};
   box-sizing: border-box;
-  height: 332px;
 `;
 
 const Title = styled.h3``;

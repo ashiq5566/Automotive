@@ -4,6 +4,7 @@ import { useNavigate, NavLink } from 'react-router-dom'
 import Dashb_icon from '/icons/dasboard.svg'
 import Assets from '/icons/assets.svg'
 import Booking from '/icons/booking.svg'
+import Sell from '/icons/sell.svg'
 import { ReactSVG } from 'react-svg'
 
 
@@ -37,6 +38,15 @@ const SideBar = () => {
 				>
 					<ReactSVG className='icon' src={Booking} alt='booking' />
 					Booking
+				</SidebarLink>
+			</SidebarListItem>
+			<SidebarListItem>
+				<SidebarLink 
+					to="/sell-cars"
+					className={({ isActive }) => isActive ? "active" : ""}
+				>
+					<ReactSVG className='icon' src={Sell} alt='sell_car' />
+					Sell Car
 				</SidebarLink>
 			</SidebarListItem>
 		</SidebarList>
@@ -76,6 +86,7 @@ const SidebarListItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   width: 100%;
+  margin-bottom: 10px;
 
   &:hover {
     background-color: #F3F5F8;

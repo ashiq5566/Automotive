@@ -6,7 +6,6 @@ import Loop from '/icons/loop.svg'
 import Star from '/icons/star.svg'
 import Tunder from '/icons/tunder.svg'
 import 'react-circular-progressbar/dist/styles.css';
-import Cruze from '../../assets/images/car.png'
 import {motion, useAnimation} from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 

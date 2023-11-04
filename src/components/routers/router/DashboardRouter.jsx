@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import Dashboard from '../../screens/Dashboard';
 import Header from '../../includes/Header';
 import Booking from '../../screens/Booking';
+import SellCars from '../../screens/SellCars';
 
 
 
@@ -18,6 +19,7 @@ const DashboardRouter = () => {
                 <Routes>
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="booking" element={<Booking />} />
+                    <Route path="sell-cars" element={<SellCars />} />
                 </Routes>
             </Screen>
         </Container>
