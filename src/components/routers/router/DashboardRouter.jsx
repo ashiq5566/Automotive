@@ -4,6 +4,7 @@ import SideBar from '../../includes/SideBar'
 import { Route, Routes } from 'react-router-dom'
 import Dashboard from '../../screens/Dashboard';
 import Header from '../../includes/Header';
+import Booking from '../../screens/Booking';
 
 
 
@@ -16,6 +17,7 @@ const DashboardRouter = () => {
             <Screen>
                 <Routes>
                     <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="booking" element={<Booking />} />
                 </Routes>
             </Screen>
         </Container>

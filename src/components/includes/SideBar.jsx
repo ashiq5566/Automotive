@@ -4,6 +4,8 @@ import { useNavigate, NavLink } from 'react-router-dom'
 import Dashb_icon from '/icons/dasboard.svg'
 import Assets from '/icons/assets.svg'
 import Booking from '/icons/booking.svg'
+import { ReactSVG } from 'react-svg'
+
 
 
 
@@ -12,22 +14,28 @@ const SideBar = () => {
   return (
     <SidebarContainer>
 		<SidebarList>
-			<SidebarListItem >
-				<SidebarLink
-					to="/dashboard" >
-						<img className='icon' src={Dashb_icon} alt='dashb' />
-                         Dashboard
+			<SidebarListItem className={({ isActive }) => isActive ? "active" : ""}>
+				<SidebarLink 
+					to="/dashboard"
+					>
+					<ReactSVG className='icon' src={Dashb_icon} alt='dashb' />
+						Dashboard
 				</SidebarLink>
 			</SidebarListItem>
 			<SidebarListItem>
-				<SidebarLink>
-					<img className='icon' src={Assets} alt='assets' />
+				<SidebarLink
+					to="/assets"
+					className={({ isActive }) => isActive ? "active" : ""}>
+					<ReactSVG className='icon' src={Assets} alt='assets' />
                      Assets
 				</SidebarLink>
 			</SidebarListItem>
 			<SidebarListItem>
-				<SidebarLink>
-					<img className='icon' src={Booking} alt='booking' />
+				<SidebarLink 
+					to="/booking"
+					className={({ isActive }) => isActive ? "active" : ""}
+				>
+					<ReactSVG className='icon' src={Booking} alt='booking' />
 					Booking
 				</SidebarLink>
 			</SidebarListItem>
@@ -57,22 +65,20 @@ const SidebarContainer = styled.aside`
     position: fixed;
     background: #fff;
     margin-top: 108px;
-    width: 152px;
+    width: 250px;
 `;
-const SidebarList = styled.ul`
+const SidebarList = styled.div`
   padding: 0;
   list-style-type: none;
 `;
 
-const SidebarListItem = styled.li`
-  padding: 7px 8px;
+const SidebarListItem = styled.div`
   font-size: 14px;
-  color: white;
-  transition: background-color 0.3s;
   cursor: pointer;
+  width: 100%;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #F3F5F8;
   }
 `;
 
@@ -85,9 +91,14 @@ const SidebarLink = styled(NavLink)`
     line-height: normal;
 	display: flex;
 	align-items: center;
+	padding: 7px 105px 7px 8px;
+	border-radius: 4px;
 	.icon{
 		margin-right: 8px;
 	}
+	&.active {
+	background-color: #F3F5F8;
+  }
 `;
 const Bottom = styled.div``;
 const Logout = styled.div`

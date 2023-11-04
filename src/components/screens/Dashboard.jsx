@@ -80,22 +80,23 @@ const Dashboard = () => {
 
   const recommend_data = [
     {
-      id : 1,
-      title : "Chevorlet Cruze",
-      background_color : "#E1DFA4",
-	  percentage : "64",
-	  likes : "142K",
-	  amount : "42",
-	  image : Cruze
-    },
-    {
-		id : 2,
+		id : 1,
 		title : "Suzuki Swift",
 		background_color : "#E3ECF1",
 		percentage : "74",
 		likes : "152K",
 		amount : "52",
 		image : Swift
+      
+    },
+    {
+		id : 2,
+		title : "Chevorlet Cruze",
+		background_color : "#E1DFA4",
+		percentage : "64",
+		likes : "142K",
+		amount : "42",
+		image : Cruze
 	  },
 	  {
 		id : 3,
