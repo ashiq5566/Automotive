@@ -25,10 +25,10 @@ const SideBar = () => {
 			</SidebarListItem>
 			<SidebarListItem>
 				<SidebarLink
-					to="/assets"
+					to="/services"
 					className={({ isActive }) => isActive ? "active" : ""}>
 					<ReactSVG className='icon' src={Assets} alt='assets' />
-                     Assets
+                     Our Services
 				</SidebarLink>
 			</SidebarListItem>
 			<SidebarListItem>

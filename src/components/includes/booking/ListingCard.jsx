@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styled from 'styled-components'
 import People from '/icons/people.svg'
 import Loop from '/icons/loop.svg'
@@ -6,32 +6,39 @@ import Like from '/icons/like.svg'
 import { ReactSVG } from 'react-svg'
 
 const ListingCard = ({ item = {} }) => {
-  return (
-    <Container>
-        <Top isFavorite={item.favorite}>
-            <Title>{item.title}</Title>
-            <ReactSVG
-                className='like'
-                src={Like}
-                alt='icon'
-            />
-        </Top>
-        <span className='segment'>{item.segment}</span>
-        <Car>
-            <img src={item.image} alt='car' />
-        </Car>
-        <Bottom>
-            <Left>
-                <ReactSVG className="people" src={People} alt='icon' />
-                <span className='count'>{item.count}</span>
-                <ReactSVG className='loop' src={Loop} alt='icon' />
-                <span className='transmission'>{item.transmission}</span>
-            </Left>
-            <span className='amount'>${item.amount}<small className='small'>/d</small></span>
-        </Bottom>
+    const [isFavorite, setIsFavorite] = useState(item.favorite);
 
-    </Container>
-  )
+    const toggleFavorite = () => {
+        setIsFavorite(!isFavorite);
+    };
+
+    return (
+        <Container>
+            <Top isfavorite={isFavorite}>
+                <Title>{item.title}</Title>
+                <ReactSVG
+                    className='like'
+                    src={Like}
+                    alt='icon'
+                    onClick={toggleFavorite}
+                />
+            </Top>
+            <span className='segment'>{item.segment}</span>
+            <Car>
+                <img src={item.image} alt='car' />
+            </Car>
+            <Bottom>
+                <Left>
+                    <ReactSVG className="people" src={People} alt='icon' />
+                    <span className='count'>{item.count}</span>
+                    <ReactSVG className='loop' src={Loop} alt='icon' />
+                    <span className='transmission'>{item.transmission}</span>
+                </Left>
+                <span className='amount'>${item.amount}<small className='small'>/d</small></span>
+            </Bottom>
+
+        </Container>
+    )
 }
 
 export default ListingCard
@@ -60,8 +67,8 @@ const Top = styled.div`
         height: 24px;
         width: 24px;
         path {
-            stroke: ${(props) => (props.isFavorite ? 'none' : '#A162F7')};
-            fill: ${(props) => (props.isFavorite ? '#F84F56' : 'none')};
+            stroke: ${(props) => (props.isfavorite ? 'none' : '#A162F7')};
+            fill: ${(props) => (props.isfavorite ? '#F84F56' : 'none')};
         } 
     }
 `;
