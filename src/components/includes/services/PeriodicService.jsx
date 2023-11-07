@@ -5,14 +5,13 @@ import { Link } from 'react-router-dom';
 
 const PeriodicService = ({ item = {} }) => {
   return (
-    <Main to="details">
+    <Main to={item.link}>
         <Left>
             <h3 className='title'>{item.title}</h3>
             <ul className='list'>
-                <li className='item'>{item.feature1}</li>
-                <li className='item'>{item.feature2}</li>
-                <li className='item'>{item.feature3}</li>
-                <li className='item'>{item.feature4}</li>
+                {item.features.map((feature, i) => (
+                    <li key={i}  className='item'>{feature.title}</li>
+                ))}
             </ul>
             <h5 className='amount'>Rs.{item.amount}/-</h5>
         </Left>

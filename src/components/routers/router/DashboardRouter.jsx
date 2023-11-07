@@ -25,7 +25,9 @@ const DashboardRouter = () => {
                         <Route index element={<Services />} />
                         <Route path="periodic/*" >
                             <Route index element={<NormalService />} />
-                            <Route path="details" element={<ServiceDetails />} />
+                            <Route path="basic" element={<ServiceDetails type={"basic"} />} />
+                            <Route path="standard" element={<ServiceDetails type={"standard"}/>} />
+                            <Route path="comprehensive" element={<ServiceDetails type={"comprehensive"} />} />
                         </Route>
                     </Route>
                     <Route path="booking" element={<Booking />} />
