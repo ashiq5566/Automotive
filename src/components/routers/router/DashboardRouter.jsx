@@ -8,6 +8,7 @@ import Booking from '../../screens/Booking';
 import SellCars from '../../screens/SellCars';
 import Services from '../../screens/Services';
 import NormalService from '../../screens/NormalService';
+import ServiceDetails from '../../screens/ServiceDetails';
 
 
 
@@ -22,7 +23,10 @@ const DashboardRouter = () => {
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="services/*" >
                         <Route index element={<Services />} />
-                        <Route path="periodic" element={<NormalService />} />
+                        <Route path="periodic/*" >
+                            <Route index element={<NormalService />} />
+                            <Route path="details" element={<ServiceDetails />} />
+                        </Route>
                     </Route>
                     <Route path="booking" element={<Booking />} />
                     <Route path="sell-cars" element={<SellCars />} />
